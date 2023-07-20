@@ -104,6 +104,7 @@ async function getPokemonData() {
 
         //Nome do pokemon
         
+        var home = document.getElementsByClassName('lugiaimg')
 
         //declara a imagem do pokemon, trocando de acordo com o pokemon selecionado
         var id = data.id
@@ -117,10 +118,10 @@ async function getPokemonData() {
         //informações do pokemon
         //body.innerHTML = `Altura: ${height} m, Peso: ${pesoEmkg} Kg`;
 
+
         //cria uma div
         const imageDiv = document.createElement('div');
         imageDiv.classList.add('pokemon_image');
-
         link.href = data.species.url;
         link.innerText = "More info";
 
@@ -134,6 +135,7 @@ async function getPokemonData() {
         divpai.appendChild(div)
         postsContainer.innerHTML = "";
         postsContainer.appendChild(divpai);
+        
     } catch (error) {
         console.error("Error fetching data:", error);
     }
