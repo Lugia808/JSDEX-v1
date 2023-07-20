@@ -125,6 +125,9 @@ async function getPokemonData() {
         link.href = data.species.url;
         link.innerText = "More info";
 
+
+        divpai.scrollIntoView({behavior: 'smooth'})
+
         //estudar
         imageDiv.appendChild(image)
         div.appendChild(title);
