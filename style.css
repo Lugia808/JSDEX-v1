@@ -9,245 +9,165 @@ body {
     margin: 0;
 }
 
+
+.content {
+    /*essa div é tipo um body, só pra ter um controle melhor das son's*/
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
 .hide {
     display: none;
 }
 
-a,
-input[type='submit'] {
-    background-color: transparent;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1em;
+/*menu configs*/
+
+.menu {
+    /*div pai 0*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    height: 4rem;
+    width: 100%;
+    background-color: #0DB8A3;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: solid black 1px;
+
+}
+
+.menu input,
+button {
+    background-color: #059786;
+    padding: 0.2rem;
     border: none;
+    border-radius: 1rem;
+    height: 1.5rem;
+}
+
+.menu input::placeholder {
+    color: rgb(87, 87, 87);
+    font-size: 12px;
+}
+
+h1 {
+    margin-left: 2rem;
+    color: white;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#searchdiv1 {
+    /*div pai -1*/
+    display: flex;
+    align-items: center;
+
+}
+
+#searchBox1 {
+    /*son*/
+    text-align: center;
+    height: 2rem;
+    width: 12rem;
+}
+
+#submitButton1 {
+    /*son*/
+    text-align: baseline;
+    margin-left: 0.5rem;
+    width: 4rem;
+    height: 2rem;
+    background-color: #059786;
     cursor: pointer;
 }
 
-a:hover,
-input[type="submit"] {
-    opacity: 1;
-
+.loginButton {
+    /*son*/
+    width: 5rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
 }
 
-input:hover {
-    animation: sombra 1s;
-    animation-delay: 1000ms;
-}
-
-@keyframes sombra {
-    0% {
-        box-shadow: 0px 0px 3px black;
-
-    }
-
-    25% {
-        box-shadow: 0px 0px 5px black;
-    }
-
-    50% {
-        box-shadow: 0px 0px 7px black;
-    }
-
-    75% {
-        box-shadow: 0px 0px 9px black;
-    }
-
-    100% {
-        box-shadow: 0px 0px 10px black;
-    }
-
-    75% {
-        box-shadow: 0px 0px 9px black;
-    }
-
-    50% {
-        box-shadow: 0px 0px 7px black;
-    }
-
-    25% {
-        box-shadow: 0px 0px 5px black;
-    }
-}
-
-.search_container{
+.sitewallpaper {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    height: 23rem;
+    width: 100%;
+    background-color: #2f91d2;
+    background-image: url(lugia.webp);
+    text-align: center;
     display: flex;
-    margin-top: 10rem;
-    margin-left: -8rem;
-    margin-right: 20rem;
     justify-content: center;
-    border-radius: 4rem;
 }
 
-.description1{
-    width: 30rem;
-    height: 10rem;
-    background-color: white ;
-    margin: auto;
-    margin-bottom:6rem;
-    border-radius: 2rem;
-    display: flex;
-    text-align:start;
-    justify-content: center;    
-
-}
-
-.description1 h4{
-    font-size: 25px;
-    color: rgb(33, 33, 33);
-    font-family: Helvetica;
-    font: normal;
-    font-weight: bolder;
-    opacity: 100%;
-    margin-left: 1.5rem;
-}
-
-input {
+#searchBox2 {
+    /*son of search div*/
     border-radius: 1.5rem;
-    border: solid rgb(106, 106, 255);
+    border: #059786 solid 2px;
     background-color: white;
     padding: 0.5rem;
     margin-left: 3rem;
     height: 2rem;
-    width: 15rem;
+    width: 20rem;
     text-align: center;
     font-size: 20px;
-
-
 }
 
+.searchdiv2 {
+    /*son of sitewallpaper*/
+    display: flex;
+    margin-top: 0rem;
+    justify-content: center;
+    border-radius: 4rem;
+    align-items: center;
+}
 
-
-button {
-    border: solid white 1px;
+.submitButton2 {
+    /*son of sitewallpaper*/
+    border: solid #059786 1px;
     border-radius: 1rem;
-    background-color: rgb(180, 65, 65);
+    background-color: #0cceb7;
     padding: 0.5rem;
     box-shadow: 0px 0px 2px black;
-    height: 3rem;
+    height: 2rem;
     margin-left: 2px;
-    
-    
+    cursor: pointer;
 }
 
-#posts-container{
+hr {
+    /*son of body(header)*/
+    margin-bottom: 10rem;
+    height: 2rem;
+    background-color: rgb(123, 123, 203);
+    margin-bottom: 5%;
+}
+
+.paicardcontainer {
     display: flex;
     justify-content: center;
-
 }
 
-.pokemon_image {
-
-    margin: auto;
-    overflow: hidden;
-    background-image: linear-gradient(to bottom, rgb(168, 29, 29) 50%, rgb(204, 204, 204) 50%);
-    border-radius: 50%;
-    border: solid black;
-    height: 15rem;
-    width: 15rem;
-}
-
-h2,
-p {
-    text-align: center;
-    color: white;
-    background-color: transparent;
-    text-transform: capitalize;
-}
-
-
-
-a {
-    margin-bottom: 0.5rem;
-
-}
-
-.divnormal {
+#cardContainer {
+    /*son of paicardcontainer*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: rgb(93, 124, 249);
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    border-radius: 2rem;
-    padding-bottom: 10rem;
-    width: 20rem;
-    margin-top: 20rem;
-    display: flex;
-    flex-direction: column;
-    margin-left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 0px 10px black;
-
-    animation-name: transicao;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px black;
+    padding-top: 2rem;
+    width: 90%;
 }
-
-.textin {
-    background-color: transparent;
-    color: white;
-    
-}
-
-
-
-.imagepokemon {
-    height: 250px;
-    width: 250px;
-}
-
-@keyframes transicao {
-
-    0%{
-        margin-left: 0rem;
-    }
-
-    25%{
-        margin-left: 3rem;
-    }
-
-    50%{
-        margin-left: 6rem;
-    }
-
-    75%{
-        margin-left: 9rem;
-    }
-
-    100%{
-        margin-left: 12rem;
-    }
-    
-}
-
-@keyframes opacidade {
-
-    0%{
-        opacity: 0;
-    }
-
-    25%{
-        opacity: 3;
-    }
-
-    50%{
-        opacity: 6;
-    }
-
-    75%{
-        opacity: 9;
-    }
-
-    100%{
-        opacity: 12;
-    }
-    
-}
-
-
 
 .card {
+    /*son of #cardcontainer that is son of .paiContainer*/
     background-color: rgb(140, 163, 255);
     height: 17rem;
     width: 12rem;
@@ -257,7 +177,8 @@ a {
     border-radius: 1.5rem;
     flex-direction: column;
     transition: transform .2s;
-    border: solid rgb(84, 109, 210);
+    border: solid rgb(37, 37, 37);
+
 }
 
 .card:hover {
@@ -265,49 +186,17 @@ a {
     transform: scale(1.2);
 }
 
+.numberpk{
+    align-self: flex-start;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 60%;
 
-#cardContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(93, 124, 249);
-    border-radius: 2rem;
-    box-shadow: 0px 0px 8px black;
-    padding-top: 2rem;
-    width: 90%;    
-}
-
-.divpai {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(45, 43, 43);
-    border-radius: 4rem;
-    height: 40rem;
-    width: 100%;
-    margin-bottom: 1rem;
-    animation-name: opacidade;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-.divcentral{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.pkname {
-    color: rgb(26, 26, 29);
-    text-transform: capitalize;
-}
-
-.paicardcontainer{
-    display: flex;
-    justify-content: center;
 }
 
 .pkimage {
-    margin-top: 10%;
+
     background-color: rgb(79, 79, 79);
     border-radius: 50% 20% 50% 20%;
     padding: 1rem;
@@ -316,9 +205,170 @@ a {
 
 }
 
+.pkname {
+    color: rgb(26, 26, 29);
+    text-transform: capitalize;
+    align-self: flex-start;
+    margin-left: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.hrcardmini{
+    width: 100%;
+    height: 10px;
+    border: none;
+    background-color: rgb(37, 37, 37);
+}
+
+/*segunda tela*/
+
+#posts-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.divpai {
+    /*segunda tela*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(45, 43, 43);
+    border-radius: 4rem;
+    height: 45rem;
+    width: 100%;
+    margin-bottom: 4rem;
+
+
+    animation-name: opacidade;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+.divcentral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.divnormal {
+    /*Após a busca*/
+    background-color:#059786;
+    text-align: center;
+    border: solid white 1px;
+
+
+    align-items: center;
+    border-radius: 2rem;
+    height: 30rem;
+    width: 25rem;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px black;
+    padding: 0.5rem;
+    animation-name: transicao;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.pokemon_imagediv {
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, rgb(217, 217, 217) 40%, rgb(255, 255, 255) 50%);
+    border-radius: 50%;
+    border: solid rgb(53, 53, 53);
+    height: 15rem;
+    width: 15rem;
+}
+
+.imagepokemon {
+    height: 200px;
+    width: 200px;
+    margin-top: 1rem;
+}
+
+
+.divdescription {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline: 0.5rem;
+    justify-content: space-between;
+}
+
+.HP {
+    text-transform: capitalize;
+    font-family: 'courier' !important;
+    font-weight: bold;
+    margin-left: 1rem;
+
+}
+
+
+.texthp {
+    font-family: 'courier' !important;
+    font-weight: bold;
+    margin-left: 4rem;
+}
+
+.barfundo {
+    width: 8rem;
+    height: 1rem;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding-inline: 2px;
+    position: relative;
+    /* Add relative position to enable absolute positioning for children */
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+}
+
+.barfrente {
+    height: 0.8rem;
+    background-color: rgb(48, 232, 48);
+    margin-top: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+#hpporcentagem {
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 11;
+    position: absolute;
+    top: -65%;
+    left: 43%;
+    opacity: 60%;
+    /* Positions the element at the horizontal center of its parent */
+}
+
+.hrcard{
+    width: 100%;
+    height: 0.5rem;
+    border: none;
+    background-color: white;
+}
+
+
 body::-webkit-scrollbar {
     width: 12px;
-    /* width of the entire scrollbar */
+
 
 }
 
@@ -337,78 +387,50 @@ body::-webkit-scrollbar-thumb {
     /* creates padding around scroll thumb */
 }
 
+@keyframes transicao {
 
+    0% {
+        margin-left: 0rem;
+    }
 
+    25% {
+        margin-left: 0.75rem;
+    }
 
-/*vou ajeitar isso*/
+    50% {
+        margin-left: 1.5rem;
+    }
 
+    75% {
+        margin-left: 2.5rem;
+    }
 
-.content {
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-
-.menu {
-    height: 4rem;
-    width: 100%;
-    background-color: #0DB8A3;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    border-bottom: solid black 1px;
-}
-
-.lugiaimg {
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-    height: 23rem;
-    width: 100%;
-    background-color:#2f91d2;
-    background-image: url(lugia.webp);
-    text-align: center;
-    display: flex;
+    100% {
+        margin-left: 3;
+    }
 
 }
 
+@keyframes opacidade {
 
+    0% {
+        opacity: 0;
+    }
 
+    25% {
+        opacity: 3;
+    }
 
-.container_text {
-    display: flex;
-    justify-content: center;
-}
+    50% {
+        opacity: 6;
+    }
 
-.menu input {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    background-color: #059786;
-    padding: 0.2rem;
-    padding-inline: 1rem;
-    border-radius: 2rem;
-    border: none;
-    color: white;
-    font-size: 15px;
-}
+    75% {
+        opacity: 9;
+    }
 
-h1 {
-    margin: auto;
-    color: white;
-    font-size: 45px;
-    font-family: Arial, Helvetica, sans-serif;
-    
+    100% {
+        opacity: 12;
+    }
 
 }
-
-
-
-hr {
-    margin-bottom: 10rem;
-    height: 2rem;
-    background-color: rgb(123, 123, 203);
-    margin-bottom: 5%;
-}
-
