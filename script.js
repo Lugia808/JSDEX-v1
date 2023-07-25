@@ -152,13 +152,16 @@ async function getPokemonData() {
         texttype.className = 'HP'
         const types = data.types
         const pktype = types[0].type.name
-        texttype.innerHTML = `Type: ${pktype}`;
+        texttype.innerHTML = `Type:${pktype}`;
 
 
         const life = data.stats[0].base_stat
         console.log(life)
         const texthp = document.createElement('p')
         texthp.className = 'texthp'
+
+        const divtexthpandbar = document.createElement('div')
+        divtexthpandbar.className = 'divtexthpandbar'
 
         texthp.innerHTML = 'HP:'
         //texthp.innerHTML = `HP:`;
@@ -200,13 +203,16 @@ async function getPokemonData() {
 
         //estudar
         imageDiv.appendChild(image)
-        div.appendChild(title)
         div.appendChild(imageDiv)
+        div.appendChild(title)
         div.appendChild(hr)
         div.appendChild(divdescription)
         divdescription.appendChild(texttype)
         divdescription.appendChild(texthp)
+        divdescription.appendChild(divtexthpandbar)
         divdescription.appendChild(barfundo)
+        divtexthpandbar.appendChild(texthp)
+        divtexthpandbar.appendChild(barfundo)
         barfundo.appendChild(barfrente)
         div.appendChild(body);
 
@@ -214,6 +220,8 @@ async function getPokemonData() {
         divpai.appendChild(div)
         postsContainer.innerHTML = "";
         postsContainer.appendChild(divpai);
+
+        
 
 
         setTimeout(() => {

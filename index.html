@@ -17,14 +17,35 @@
     <header>
         <div class="content">
             <div class="menu">
-                <a style="text-decoration: none;" href="index.html"><h1 class="text">JsDEX</h1></a>
+                <div id="menutexts1">
+                    <a style="text-decoration: none;" href="index.html">
+                        <h1 class="text">LugiaSKY</h1>
+                    </a>
+
+                    <div id="rolldiv">
+                        <button id="clickedesce" onclick="toggleBar()">LugiaDEX</button>
+                         <div id="seta"></div>
+
+                        <div id="hoverdiv">
+
+                            <div id="inhoverdiv1">
+                                <ul>
+                                    <li><a href="#">Tipos</a></li>
+                                    <li><a href="#">Lendários</a></li>
+                                    <li><a href="#">Míticos</a></li>
+                                    <li><a href="#">Shinys</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
                 <div id="espacador">
 
 
                     <div id="searchdiv1">
 
                         <input type="text" id="searchBox1" placeholder="Enter Pokemon name">
-                        <button onclick="getPokemonData()" id="submitButton1">Buscar</button>
                     </div>
                 </div>
                 <input type="button" value="Log in" class="loginButton">
